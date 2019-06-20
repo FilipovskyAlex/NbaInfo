@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@charset "UTF-8";
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
@@ -11126,5 +11126,176 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+div.row.header-wrapper {
+  font-family: "Work Sans", sans-serif;
+}
+
+div.row.header-wrapper header.header {
+  width: 100%;
+  border-bottom: #9480ff 0.5px solid;
+}
+
+div.row.header-wrapper header.header nav {
+  background-color: #eeeaff;
+}
+
+div.row.header-wrapper header.header nav a.navbar-brand {
+  color: #9480ff;
+  font-weight: bolder;
+  font-size: 34px;
+  padding-left: 35px;
+}
+
+div.row.header-wrapper header.header nav div#navbarSupportedContent {
+  padding: 0 35px;
+}
+
+div.row.header-wrapper header.header nav div#navbarSupportedContent button {
+  border: none;
+  outline: none;
+  background: linear-gradient(to left, powderblue, pink, #9480ff);
+  border-radius: 15px;
+  padding: 0;
+  margin: 0 10px;
+}
+
+div.row.header-wrapper header.header nav div#navbarSupportedContent button a {
+  color: white;
+  font-size: 18px;
+}
+
+div.row.header-wrapper header.header nav div#navbarSupportedContent button:hover {
+  background: #9480ff;
+}
+
+div.row.header-wrapper header.header nav div#navbarSupportedContent ul li {
+  margin-right: 15px;
+}
+
+div.row.header-wrapper header.header nav div#navbarSupportedContent ul li a {
+  font-size: 24px;
+  color: #b7b1db;
+}
+
+div.row.header-wrapper header.header nav div#navbarSupportedContent ul li a:hover {
+  color: #9480ff;
+}
+
+div.row {
+  font-family: "Work Sans", sans-serif;
+}
+
+div.row footer.footer {
+  width: 100%;
+  height: 10%;
+  padding: 10px;
+  background-color: #eeeaff;
+  border-top: #9480ff 1px solid;
+  position: fixed;
+  bottom: 0;
+}
+
+div.row footer.footer div.row div.col-sm-3 {
+  margin: 0 auto;
+  height: 100%;
+  padding-top: 10px;
+}
+
+div.row footer.footer div.row div.col-sm-3 div {
+  width: 100%;
+  margin: 0 auto;
+}
+
+div.row footer.footer div.row div.col-sm-3 div span {
+  color: #9480ff;
+}
+
+div.row footer.footer div.row div.col-sm-3 div i {
+  color: #9480ff;
+}
+
+div.row footer.footer div.row div.col-sm-3 div a {
+  color: #9480ff;
+}
+
+div.row footer.footer div.row div.col-sm-3 div a:hover {
+  color: #9561e2;
+}
+
+div.row.justify-content-center {
+  padding: 50px 0 60px 0;
+}
+
+div.row.justify-content-center .col-md-8 .card .card-header {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  background: linear-gradient(to left, powderblue, pink, #9480ff);
+}
+
+div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row label {
+  font-size: 16px;
+  color: #9561e2;
+}
+
+div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row div.col-md-6 input,
+div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-8 input {
+  border: none;
+  border: #9561e2 0.5px solid;
+  height: 45px;
+}
+
+div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row div.col-md-6 input::-webkit-input-placeholder,
+div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-8 input::-webkit-input-placeholder {
+  color: #9480ff;
+}
+
+div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row div.col-md-6 input:-ms-input-placeholder,
+div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-8 input:-ms-input-placeholder {
+  color: #9480ff;
+}
+
+div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row div.col-md-6 input::-ms-input-placeholder,
+div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-8 input::-ms-input-placeholder {
+  color: #9480ff;
+}
+
+div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row div.col-md-6 input::placeholder,
+div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-8 input::placeholder {
+  color: #9480ff;
+}
+
+div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row div.col-md-6 button,
+div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-8 button {
+  border: none;
+  outline: none;
+  background: linear-gradient(to left, powderblue, pink, #9480ff);
+  border-radius: 15px;
+  padding: 10px;
+  color: white;
+  width: auto;
+}
+
+div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row div.col-md-6 button:hover,
+div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-8 button:hover {
+  background: #9480ff;
+}
+
+div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row div.col-md-6 div.form-check input.form-check-input,
+div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-8 div.form-check input.form-check-input {
+  height: auto;
+}
+
+div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row div.col-md-6 div.form-check label,
+div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-8 div.form-check label {
+  font-size: 16px;
+  color: #9561e2;
+}
+
+div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row div.col-md-6 a.btn.btn-link,
+div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-8 a.btn.btn-link {
+  color: #9480ff;
 }
 

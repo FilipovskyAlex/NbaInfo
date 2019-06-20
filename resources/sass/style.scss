@@ -1,0 +1,184 @@
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Header
+
+div.row.header-wrapper {
+    font-family: 'Work Sans', sans-serif;
+
+    header.header {
+        width: 100%;
+        border-bottom: $third-gr 0.5px solid;
+
+        nav {
+            background-color: $back-col;
+
+            a.navbar-brand {
+                color: $third-gr;
+                font-weight: bolder;
+                font-size: 34px;
+                padding-left: 35px;
+            }
+
+            div#navbarSupportedContent {
+                padding: 0 35px;
+
+                button {
+                    border: none;
+                    outline: none;
+                    background: linear-gradient(to left, $first-gr, $second-gr, $third-gr);
+                    border-radius: 15px;
+                    padding: 0;
+                    margin: 0 10px;
+
+
+                    a{
+                        color: white;
+                        font-size: 18px;
+                    }
+                }
+
+                button:hover {
+                    background: $third-gr;
+                }
+
+                ul {
+                    li {
+                        margin-right: 15px;
+
+                        a{
+                            font-size: 24px;
+                            color: $light-purp;
+                        }
+
+                        a:hover {
+                            color: $third-gr
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Footer
+
+div.row {
+    font-family: 'Work Sans', sans-serif;
+
+    footer.footer {
+        width: 100%;
+        height: 10%;
+        padding: 10px;
+        background-color: $back-col;
+        border-top: $third-gr 1px solid;
+        position: fixed;
+        bottom: 0;
+
+        div.row {
+
+            div.col-sm-3 {
+                margin: 0 auto;
+                height: 100%;
+                padding-top: 10px;
+
+                div {
+                    width: 100%;
+                    margin: 0 auto;
+
+                    span {
+                        color: $third-gr;
+                    }
+
+                    i {
+                        color: $third-gr;
+                    }
+
+                    a {
+                        color: $third-gr;
+                    }
+
+                    a:hover {
+                        color: $purple;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Register, login
+
+div.row.justify-content-center {
+    padding: 50px 0 60px 0;
+
+    .col-md-8 {
+        .card {
+            .card-header {
+                text-align: center;
+                color: white;
+                font-size: 20px;
+                background: linear-gradient(to left, $first-gr, $second-gr, $third-gr);
+            }
+
+            .card-body {
+                form {
+                    .form-group.row {
+                        label {
+                            font-size: 16px;
+                            color: $purple
+                        }
+
+                        div.col-md-6, .col-md-8 {
+                            input {
+                                border: none;
+                                border: $purple 0.5px solid;
+                                height: 45px;
+                            }
+
+                            input::placeholder {
+                                color: $third-gr;
+                            }
+
+                            span {
+
+                            }
+
+                            button {
+                                border: none;
+                                outline: none;
+                                background: linear-gradient(to left, $first-gr, $second-gr, $third-gr);
+                                border-radius: 15px;
+                                padding: 10px;
+                                color: white;
+                                width: auto;
+                            }
+
+                            button:hover {
+                                background: $third-gr;
+                            }
+
+                            div.form-check {
+                                input.form-check-input {
+                                    height: auto;
+                                }
+
+                                label {
+                                    font-size: 16px;
+                                    color: $purple
+                                }
+                            }
+
+                            a.btn.btn-link {
+                                color: $third-gr;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
