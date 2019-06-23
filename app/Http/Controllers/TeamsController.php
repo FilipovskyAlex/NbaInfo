@@ -5,23 +5,8 @@ namespace App\Http\Controllers;
 use App\Team;
 use Unirest\Request;
 
-class HomeController extends Controller
+class TeamsController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
         $response = Request::get(config('apiRootPath.ROOT_API_PATH')."/teams", config('apiNBA'));
@@ -33,6 +18,6 @@ class HomeController extends Controller
             $team->image = Team::getAvatar($team->abbreviation);
         }
 
-        return view('home', ['teams' => $teamsData]);
+        return view('teams.index', ['teams' => $teamsData]);
     }
 }

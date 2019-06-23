@@ -11128,24 +11128,62 @@ a.text-dark:focus {
   }
 }
 
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+  margin-right: 0;
+  margin-left: 0;
+  width: 100%;
+}
+
+.row.main-wrapper .col-sm-2 {
+  margin: 0 5px;
+}
+
+.row.main-wrapper .col-sm-2 .card p {
+  text-align: center;
+  margin-bottom: 0;
+  padding: 5px 0 0 0;
+}
+
+.row.main-wrapper .col-sm-2 .card .card-body * {
+  text-align: center;
+}
+
+.row.main-wrapper .col-sm-2 .card .card-body {
+  padding-top: 5px;
+}
+
+.row.main-wrapper .col-sm-2 .card .card-body a.a-btn {
+  width: 100%;
+  color: #fff;
+  border: none;
+  background: linear-gradient(to left, #e65a60 50%, #fff9fc 0%, #5561ff 50%);
+  margin: 5px auto 0 auto;
+}
+
 div.row.header-wrapper {
   font-family: "Work Sans", sans-serif;
 }
 
 div.row.header-wrapper header.header {
   width: 100%;
-  border-bottom: #9480ff 0.5px solid;
+  border-bottom: #5561ff 0.5px solid;
 }
 
 div.row.header-wrapper header.header nav {
-  background-color: #eeeaff;
+  background-color: #ffffff;
 }
 
 div.row.header-wrapper header.header nav a.navbar-brand {
-  color: #9480ff;
+  color: #5561ff;
   font-weight: bolder;
   font-size: 34px;
   padding-left: 35px;
+}
+
+div.row.header-wrapper header.header nav a.navbar-brand:hover {
+  color: #e65a60;
 }
 
 div.row.header-wrapper header.header nav div#navbarSupportedContent {
@@ -11155,7 +11193,7 @@ div.row.header-wrapper header.header nav div#navbarSupportedContent {
 div.row.header-wrapper header.header nav div#navbarSupportedContent button {
   border: none;
   outline: none;
-  background: linear-gradient(to left, powderblue, pink, #9480ff);
+  background: linear-gradient(to left, #e65a60 50%, #fff9fc 0%, #5561ff 50%);
   border-radius: 15px;
   padding: 0;
   margin: 0 10px;
@@ -11167,7 +11205,7 @@ div.row.header-wrapper header.header nav div#navbarSupportedContent button a {
 }
 
 div.row.header-wrapper header.header nav div#navbarSupportedContent button:hover {
-  background: #9480ff;
+  background: linear-gradient(to left, #5561ff 50%, #fff9fc 0%, #e65a60 50%);
 }
 
 div.row.header-wrapper header.header nav div#navbarSupportedContent ul li {
@@ -11176,11 +11214,11 @@ div.row.header-wrapper header.header nav div#navbarSupportedContent ul li {
 
 div.row.header-wrapper header.header nav div#navbarSupportedContent ul li a {
   font-size: 24px;
-  color: #b7b1db;
+  color: #db000b;
 }
 
 div.row.header-wrapper header.header nav div#navbarSupportedContent ul li a:hover {
-  color: #9480ff;
+  color: #5561ff;
 }
 
 div.row {
@@ -11191,8 +11229,8 @@ div.row footer.footer {
   width: 100%;
   height: 10%;
   padding: 10px;
-  background-color: #eeeaff;
-  border-top: #9480ff 1px solid;
+  background-color: #ffffff;
+  border-top: #5561ff 1px solid;
   position: fixed;
   bottom: 0;
 }
@@ -11209,19 +11247,19 @@ div.row footer.footer div.row div.col-sm-3 div {
 }
 
 div.row footer.footer div.row div.col-sm-3 div span {
-  color: #9480ff;
+  color: #5561ff;
 }
 
 div.row footer.footer div.row div.col-sm-3 div i {
-  color: #9480ff;
+  color: #5561ff;
 }
 
 div.row footer.footer div.row div.col-sm-3 div a {
-  color: #9480ff;
+  color: #5561ff;
 }
 
 div.row footer.footer div.row div.col-sm-3 div a:hover {
-  color: #9561e2;
+  color: #3490dc;
 }
 
 div.row.justify-content-center {
@@ -11232,46 +11270,46 @@ div.row.justify-content-center .col-md-8 .card .card-header {
   text-align: center;
   color: white;
   font-size: 20px;
-  background: linear-gradient(to left, powderblue, pink, #9480ff);
+  background: linear-gradient(to left, #e65a60, #5561ff);
 }
 
 div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row label {
   font-size: 16px;
-  color: #9561e2;
+  color: #3490dc;
 }
 
 div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row div.col-md-6 input,
 div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-8 input {
   border: none;
-  border: #9561e2 0.5px solid;
+  border: #3490dc 0.5px solid;
   height: 45px;
 }
 
 div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row div.col-md-6 input::-webkit-input-placeholder,
 div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-8 input::-webkit-input-placeholder {
-  color: #9480ff;
+  color: #5561ff;
 }
 
 div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row div.col-md-6 input:-ms-input-placeholder,
 div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-8 input:-ms-input-placeholder {
-  color: #9480ff;
+  color: #5561ff;
 }
 
 div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row div.col-md-6 input::-ms-input-placeholder,
 div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-8 input::-ms-input-placeholder {
-  color: #9480ff;
+  color: #5561ff;
 }
 
 div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row div.col-md-6 input::placeholder,
 div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-8 input::placeholder {
-  color: #9480ff;
+  color: #5561ff;
 }
 
 div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row div.col-md-6 button,
 div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-8 button {
   border: none;
   outline: none;
-  background: linear-gradient(to left, powderblue, pink, #9480ff);
+  background: linear-gradient(to left, #e65a60 50%, #fff9fc 0%, #5561ff 50%);
   border-radius: 15px;
   padding: 10px;
   color: white;
@@ -11280,7 +11318,7 @@ div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .
 
 div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row div.col-md-6 button:hover,
 div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-8 button:hover {
-  background: #9480ff;
+  background: linear-gradient(to left, #5561ff 50%, #fff9fc 0%, #e65a60 50%);
 }
 
 div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row div.col-md-6 div.form-check input.form-check-input,
@@ -11291,11 +11329,11 @@ div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .
 div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row div.col-md-6 div.form-check label,
 div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-8 div.form-check label {
   font-size: 16px;
-  color: #9561e2;
+  color: #3490dc;
 }
 
 div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row div.col-md-6 a.btn.btn-link,
 div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .col-md-8 a.btn.btn-link {
-  color: #9480ff;
+  color: #5561ff;
 }
 
