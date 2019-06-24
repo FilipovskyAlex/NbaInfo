@@ -11377,8 +11377,38 @@ div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .
   color: #5561ff;
 }
 
-div.row.justify-content-center .col-sm-10 table.table thead *,
-div.row.justify-content-center .col-sm-10 table.table tbody * {
+div.row.justify-content-center.players-table {
+  padding-bottom: 0;
+}
+
+div.row.justify-content-center.players-table .col-sm-10 table.table thead *,
+div.row.justify-content-center.players-table .col-sm-10 table.table tbody * {
   text-align: center;
+}
+
+.row.pagination {
+  padding-bottom: 80px;
+}
+
+.row.pagination .col-sm-3 div {
+  width: 35%;
+  margin: 0 auto;
+}
+
+.row.pagination .col-sm-3 div button {
+  border: none;
+  outline: none;
+  background: linear-gradient(to left, #e65a60 50%, #fff9fc 0%, #5561ff 50%);
+  border-radius: 15px;
+  padding: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.row.pagination .col-sm-3 div button a {
+  color: white;
+  font-size: 18px;
 }
 

@@ -15,13 +15,17 @@ class PlayersController extends Controller
     {
         $playersResponse = Request::get(config('apiRootPath.ROOT_API_PATH')."/players?page=".$page."&per_page=".self::PER_PAGE, config('apiNBA'));
 
+        $paginateData = $playersResponse->body->meta;
         $playersData = $playersResponse->body->data;
 
         foreach ($playersData as $player) {
             $player->teamLink = Team::getFullLink($player->team->abbreviation, $player->team->full_name);
         }
 
-        return view('players.index', ['players' => $playersData]);
+        return view('players.index', [
+            'players' => $playersData,
+            'pagination' => $paginateData
+        ]);
     }
 
     public function getSingle(int $id)
@@ -36,11 +40,15 @@ class PlayersController extends Controller
         $playersResponse = Request::get(config('apiRootPath.ROOT_API_PATH')."/players?page=0&per_page=".self::PER_PAGE."&search=".$request->get('search'), config('apiNBA'));
 
         $playersData = $playersResponse->body->data;
+        $paginateData = $playersResponse->body->meta;
 
         foreach ($playersData as $player) {
             $player->teamLink = Team::getFullLink($player->team->abbreviation, $player->team->full_name);
         }
-
-        return view('players.index', ['players' => $playersData]);
+//dd($paginateData);
+        return view('players.index', [
+            'players' => $playersData,
+            'pagination' => $paginateData
+        ]);
     }
 }

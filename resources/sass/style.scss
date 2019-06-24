@@ -262,7 +262,9 @@ div.row.justify-content-center {
 
 // Players
 
-div.row.justify-content-center {
+div.row.justify-content-center.players-table {
+    padding-bottom: 0;
+
     .col-sm-10 {
         table.table {
 
@@ -294,5 +296,30 @@ div.row.justify-content-center {
         }
     }
 }
+.row.pagination {
+    padding-bottom: 80px;
 
+    .col-sm-3 {
+        div {
+            width: 35%;
+            margin: 0 auto;
+
+            button {
+                border: none;
+                outline: none;
+                background: linear-gradient(to left, $first-gr 50%, $second-gr 0%, $third-gr 50%);
+                border-radius: 15px;
+                padding: 0;
+                width: fit-content;
+                margin: 0 auto;
+
+
+                a{
+                    color: white;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
 
