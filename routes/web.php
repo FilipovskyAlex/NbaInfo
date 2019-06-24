@@ -15,4 +15,5 @@ Route::prefix('/teams')->group(function () {
 Route::prefix('/players')->group(function () {
     Route::get('/{page?}', 'PlayersController@index')->name('players.index');
     Route::get('/player/{id}', 'PlayersController@getSingle')->name('players.single');
+    Route::post('', 'PlayersController@search')->name('players.search');
 });

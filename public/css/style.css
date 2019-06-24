@@ -11221,6 +11221,46 @@ div.row.header-wrapper header.header nav div#navbarSupportedContent ul li a:hove
   color: #5561ff;
 }
 
+div.row.header-wrapper header.header nav div#navbarSupportedContent form {
+  padding-right: 30px;
+}
+
+div.row.header-wrapper header.header nav div#navbarSupportedContent form input {
+  border: none;
+  border: #3490dc 0.5px solid;
+  height: 45px;
+}
+
+div.row.header-wrapper header.header nav div#navbarSupportedContent form input::-webkit-input-placeholder {
+  color: #5561ff;
+}
+
+div.row.header-wrapper header.header nav div#navbarSupportedContent form input:-ms-input-placeholder {
+  color: #5561ff;
+}
+
+div.row.header-wrapper header.header nav div#navbarSupportedContent form input::-ms-input-placeholder {
+  color: #5561ff;
+}
+
+div.row.header-wrapper header.header nav div#navbarSupportedContent form input::placeholder {
+  color: #5561ff;
+}
+
+div.row.header-wrapper header.header nav div#navbarSupportedContent form button {
+  border: none;
+  outline: none;
+  background: linear-gradient(to left, #e65a60 50%, #fff9fc 0%, #5561ff 50%);
+  border-radius: 15px;
+  padding: 10px;
+  color: white;
+  width: auto;
+}
+
+div.row.header-wrapper header.header nav div#navbarSupportedContent form button:hover {
+  background: linear-gradient(to left, #5561ff 50%, #fff9fc 0%, #e65a60 50%);
+}
+
 div.row {
   font-family: "Work Sans", sans-serif;
 }

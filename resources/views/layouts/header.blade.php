@@ -28,6 +28,13 @@
                         <a class="nav-link" href="{{ route('register') }}">SignUp</a>
                     </button>
                 @endguest
+                @if(\Illuminate\Support\Facades\Route::currentRouteName() === 'players.index')
+                    <form class="form-inline my-2 my-lg-0" action="{{ route('players.search') }}" role="search" method="post">
+                        @csrf
+                        <input name="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn" type="submit">Search</button>
+                    </form>
+                @endif
                 @auth
                     <button class="btn">
                         <a class="nav-link" href="{{ route('logout') }}"

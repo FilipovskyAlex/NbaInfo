@@ -108,6 +108,34 @@ div.row.header-wrapper {
                         }
                     }
                 }
+
+                form {
+                    padding-right: 30px;
+
+                    input {
+                        border: none;
+                        border: $blue 0.5px solid;
+                        height: 45px;
+                    }
+
+                    input::placeholder {
+                        color: $third-gr;
+                    }
+
+                    button {
+                        border: none;
+                        outline: none;
+                        background: linear-gradient(to left, $first-gr 50%, $second-gr 0%, $third-gr 50%);
+                        border-radius: 15px;
+                        padding: 10px;
+                        color: white;
+                        width: auto;
+                    }
+
+                    button:hover {
+                        background: linear-gradient(to left, $third-gr 50%, $second-gr 0%, $first-gr 50%);
+                    }
+                }
             }
         }
     }
