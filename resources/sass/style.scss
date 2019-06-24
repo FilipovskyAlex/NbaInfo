@@ -231,3 +231,40 @@ div.row.justify-content-center {
         }
     }
 }
+
+// Players
+
+div.row.justify-content-center {
+    .col-sm-10 {
+        table.table {
+
+            thead *, tbody * {
+                text-align: center;
+            }
+
+            thead {
+                tr {
+                    th {
+
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    th {
+
+                    }
+
+                    td {
+
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+

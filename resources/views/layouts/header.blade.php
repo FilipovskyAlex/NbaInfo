@@ -16,6 +16,9 @@
                             <a class="nav-link" href="#">My&nbsp;<i class="fas fa-heart"></i>&nbsp;teams</a>
                         </li>
                     @endauth
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('players.index') }}">Players</a>
+                    </li>
                 </ul>
                 @guest
                     <button class="btn">

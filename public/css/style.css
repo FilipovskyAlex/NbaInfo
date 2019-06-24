@@ -11337,3 +11337,8 @@ div.row.justify-content-center .col-md-8 .card .card-body form .form-group.row .
   color: #5561ff;
 }
 
+div.row.justify-content-center .col-sm-10 table.table thead *,
+div.row.justify-content-center .col-sm-10 table.table tbody * {
+  text-align: center;
+}
+
