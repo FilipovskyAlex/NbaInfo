@@ -27,11 +27,7 @@ class HomeController extends Controller
         $response = Request::get(config('apiRootPath.ROOT_API_PATH')."/teams", config('apiNBA'));
 
         $teamsData = $response->body->data;
-
-        foreach ($teamsData as $team) {
-            $team->link = Team::getFullLink($team->abbreviation, $team->full_name);
-            $team->image = Team::getAvatar($team->abbreviation);
-        }
+        $teamsData = Team::addProps($teamsData);
 
         return view('home', ['teams' => $teamsData]);
     }
