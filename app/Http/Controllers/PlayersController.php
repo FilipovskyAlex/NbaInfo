@@ -10,7 +10,6 @@ class PlayersController extends Controller
 {
     const PER_PAGE = 25;
 
-    // TODO pagination via metadata
     public function index(int $page = 0)
     {
         $playersResponse = Request::get(config('apiRootPath.ROOT_API_PATH')."/players?page=".$page."&per_page=".self::PER_PAGE, config('apiNBA'));
@@ -45,7 +44,7 @@ class PlayersController extends Controller
         foreach ($playersData as $player) {
             $player->teamLink = Team::getFullLink($player->team->abbreviation, $player->team->full_name);
         }
-//dd($paginateData);
+
         return view('players.index', [
             'players' => $playersData,
             'pagination' => $paginateData

@@ -11140,6 +11140,17 @@ a.text-dark:focus {
   margin: 0 5px;
 }
 
+.row.main-wrapper .col-sm-2 .card span i {
+  position: relative;
+  top: 10px;
+  left: 180px;
+  color: #e65a60;
+}
+
+.row.main-wrapper .col-sm-2 .card span i.active {
+  color: #5561ff;
+}
+
 .row.main-wrapper .col-sm-2 .card p {
   text-align: center;
   margin-bottom: 0;

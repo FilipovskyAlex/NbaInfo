@@ -3,16 +3,25 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 /**
- * Class LikedTeam
+ * Class Team
  * @package App
  */
-class LikedTeam extends Model
+class Team extends Model
 {
+    public $timestamps = false;
+
     protected $fillable = [
-        'name', 'conference', 'division', 'city', 'abbreviation'
+        'name',
+        'conference',
+        'division',
+        'city',
+        'abbreviation',
+        'liked'
     ];
 
     /**
@@ -81,13 +90,36 @@ class LikedTeam extends Model
             : asset('img/teams/no_image.png');
     }
 
-    public static function addLinkAndFullName(array $teams) : array
+    public static function addProps(array $teams) : array
     {
         foreach ($teams as $team) {
             $team->link = self::getFullLink($team->abbreviation, $team->full_name);
             $team->image = self::getAvatar($team->abbreviation);
+            $team->activeProp = self::isLike($team->abbreviation);
         }
 
         return $teams;
+    }
+
+    public function likeTeam(Request $request, Team $likedTeam) {
+        $likedTeam->name = $request->get('name');
+        $likedTeam->conference = $request->get('conference');
+        $likedTeam->division = $request->get('division');
+        $likedTeam->city = $request->get('city');
+        $likedTeam->abbreviation = $request->get('abbreviation');
+        $likedTeam->liked = 1;
+    }
+
+    public static function isLike(string $abbr) : string
+    {
+        $team = DB::table('teams')->where('abbreviation', $abbr)->first();
+
+        if ($team) {
+            if($team->liked === 1) {
+                return 'active';
+            }
+        }
+
+        return 'nonactive';
     }
 }

@@ -6,6 +6,7 @@
             @foreach($teams as $team)
                 <div class="col-sm-2">
                     <div class="card" style="width: 13rem;">
+                        <span><i class="fas fa-heart {{ $team->activeProp }}"></i></span>
                         <p><img src="{{ $team->image }}" class="card-img-top" alt="{{ $team->abbreviation }}" style="width: 100px; height: auto"></p>
                         <div class="card-body">
                             <h5 class="card-title">{{ $team->full_name }}</h5>
@@ -19,7 +20,7 @@
                 </div>
             @endforeach
         @endisset
-        @empty($players)
+        @empty($teams)
             <h2>No Data Found</h2>
         @endempty
     </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Team;
 use Unirest\Request;
+use Illuminate\Http\Request as R;
 
 class TeamsController extends Controller
 {
@@ -12,12 +13,15 @@ class TeamsController extends Controller
         $response = Request::get(config('apiRootPath.ROOT_API_PATH')."/teams", config('apiNBA'));
 
         $teamsData = $response->body->data;
-
-        foreach ($teamsData as $team) {
-            $team->link = Team::getFullLink($team->abbreviation, $team->full_name);
-            $team->image = Team::getAvatar($team->abbreviation);
-        }
+        $teamsData = Team::addProps($teamsData);
 
         return view('teams.index', ['teams' => $teamsData]);
+    }
+
+    public function like(R $request)
+    {
+        $likedTeam = new Team;
+        $likedTeam->likeTeam($request, $likedTeam);
+        $likedTeam->save();
     }
 }
