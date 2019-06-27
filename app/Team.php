@@ -6,12 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
 /**
- * Class Team
+ * Class LikedTeam
  * @package App
  */
-class Team extends Model
+class LikedTeam extends Model
 {
-
+    protected $fillable = [
+        'name', 'conference', 'division', 'city', 'abbreviation'
+    ];
 
     /**
      * @param string $abbr
@@ -77,5 +79,15 @@ class Team extends Model
         return file_exists(public_path('/img/teams/'.$abbr.'.png'))
             ? asset('img/teams/'.$abbr.'.png')
             : asset('img/teams/no_image.png');
+    }
+
+    public static function addLinkAndFullName(array $teams) : array
+    {
+        foreach ($teams as $team) {
+            $team->link = self::getFullLink($team->abbreviation, $team->full_name);
+            $team->image = self::getAvatar($team->abbreviation);
+        }
+
+        return $teams;
     }
 }
