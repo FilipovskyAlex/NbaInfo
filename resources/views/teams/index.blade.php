@@ -4,8 +4,8 @@
     <div class="row justify-content-center main-wrapper">
         @isset($teams)
             @foreach($teams as $team)
-                <div class="col-sm-2">
-                    <div class="card" style="width: 13rem;">
+                <div class="col-sm-2 team-card">
+                    <div class="card" style="width: 13rem; height: 353px">
                         <span><i class="fas fa-heart {{ $team->activeProp }}"></i></span>
                         <p><img src="{{ $team->image }}" class="card-img-top" alt="{{ $team->abbreviation }}" style="width: 100px; height: auto"></p>
                         <div class="card-body">

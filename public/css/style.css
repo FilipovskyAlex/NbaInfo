@@ -11468,3 +11468,7 @@ div.row.justify-content-center.players-table .col-sm-10 table.table tbody * {
   font-size: 18px;
 }
 
+.main-wrapper .col-sm-2.team-card {
+  padding-bottom: 7px;
+}
+
