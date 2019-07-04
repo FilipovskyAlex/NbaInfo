@@ -122,4 +122,9 @@ class Team extends Model
 
         return 'nonactive';
     }
+
+    public function scopeGetLikedTeams($query)
+    {
+        return $query->where('liked', 1)->get();
+    }
 }

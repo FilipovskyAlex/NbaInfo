@@ -13,7 +13,7 @@
                     </li>
                     @auth
                         <li class="nav-item">
-                            <a class="nav-link" href="#">My&nbsp;<i class="fas fa-heart"></i>&nbsp;teams</a>
+                            <a class="nav-link" href="{{ route('teams.favourite') }}">My&nbsp;<i class="fas fa-heart"></i>&nbsp;teams</a>
                         </li>
                     @endauth
                     <li class="nav-item">
