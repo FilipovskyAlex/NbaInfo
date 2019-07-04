@@ -335,3 +335,54 @@ div.row.justify-content-center.players-table {
     }
 }
 
+// show single player
+
+.single-player-wrapper {
+    .col-sm-10 {
+        .row {
+            padding-top: 0;
+
+            .col-sm-5.player, .col-sm-5.team {
+                h2 {
+                    text-align: center;
+                    font-weight: bolder;
+                    font-size: 24px;
+                    color: $third-gr;
+                }
+
+                .card * {
+                    text-align: center;
+                }
+
+                .card {
+                    p {
+                        margin-top: 5px;
+                        margin-bottom: 0;
+
+                        img {
+                            width: 10rem;
+                            height: auto;
+                        }
+                    }
+
+                    .card-body {
+                        h5 {
+                            font-size: 22px;
+                        }
+
+                        div {
+                            span {
+                                font-size: 18px;
+                            }
+                        }
+
+                        a {
+                            color: $third-gr;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

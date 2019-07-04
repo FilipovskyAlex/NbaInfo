@@ -20,12 +20,21 @@
                         @foreach($players as $player)
                             <tr>
                                 <th scope="row">{{ $player->id }}</th>
-                                <td style="width: 25%">{{ $player->first_name }}&nbsp;{{ $player->last_name }}</td>
-                                <td>{{ $player->height_feet }}</td>
-                                <td>{{ $player->height_inches }}</td>
+                                <td style="width: 25%"><a href="{{ route('players.single', $player->id) }}">{{ $player->first_name }}&nbsp;{{ $player->last_name }}</a></td>
+                                <td>
+                                    @isset($player->height_feet){{ $player->height_feet }}@endisset
+                                    @empty($player->height_feet)&nbsp;-&nbsp;@endempty
+                                </td>
+                                <td>
+                                    @isset($player->height_inches){{ $player->height_inches }}@endisset
+                                    @empty($player->height_inches)&nbsp;-&nbsp;@endempty
+                                </td>
                                 <td>{{ $player->position }}</td>
-                                <td>{{ $player->weight_pounds }}</td>
-                                <td><a href="{{ $player->teamLink }}">Team</a></td>
+                                <td>
+                                    @isset($player->weight_pounds){{ $player->weight_pounds }}@endisset
+                                    @empty($player->weight_pounds)&nbsp;-&nbsp;@endempty
+                                </td>
+                                <td><a href="{{ $player->teamLink }}">{{ $player->team->full_name }}</a></td>
                             </tr>
                         @endforeach
                     </tbody>

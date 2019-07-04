@@ -29,9 +29,14 @@ class PlayersController extends Controller
 
     public function getSingle(int $id)
     {
-        $response = Request::get(config('apiRootPath.ROOT_API_PATH')."/players/".$id, config('apiNBA'));
+        $player = Request::get(config('apiRootPath.ROOT_API_PATH')."/players/".$id, config('apiNBA'));
 
-        dd($response->body);
+        $player->body->team->link = Team::getFullLink($player->body->team->abbreviation, $player->body->team->name);
+        $player->body->team->image = Team::getAvatar($player->body->team->abbreviation);
+
+        $playerData = $player->body;
+//dd($playerData->team);
+        return view('players.single', ['player' => $playerData]);
     }
 
     public function search(R $request)
