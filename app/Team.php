@@ -110,6 +110,10 @@ class Team extends Model
         $likedTeam->liked = 1;
     }
 
+    public function scopeUnlikeTeam($query, string $abbr) {
+        return $query->where('abbreviation', $abbr)->delete();
+    }
+
     public static function isLike(string $abbr) : string
     {
         $team = DB::table('teams')->where('abbreviation', $abbr)->first();

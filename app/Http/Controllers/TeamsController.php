@@ -37,6 +37,16 @@ class TeamsController extends Controller
     }
 
     /**
+     * Unlike the certain team
+     * @param R $request
+     */
+    public function unlike(R $request)
+    {
+        $abbreviation = $request->get('abbreviation');
+        Team::unlikeTeam($abbreviation);
+    }
+
+    /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function showFavourite()

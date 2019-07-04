@@ -44,7 +44,13 @@
 
                 body = JSON.stringify(body);
 
-                like(card.firstElementChild.firstChild, body);
+                let child = card.firstElementChild.firstChild;
+
+                if(child.classList.contains('active')) {
+                    unlike(card.firstElementChild.firstChild, body);
+                } else {
+                    like(card.firstElementChild.firstChild, body);
+                }
             });
         }
 
@@ -54,6 +60,18 @@
             let xhr = new XMLHttpRequest();
 
             xhr.open("POST", '{{ route('teams.like') }}', true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.setRequestHeader('X-CSRF-TOKEN', $('meta[name="csrf-token"]').attr('content'));
+
+            xhr.send(body);
+        }
+
+        function unlike(child, body) {
+            child.classList.remove('active');
+
+            let xhr = new XMLHttpRequest();
+
+            xhr.open("POST", '{{ route('teams.unlike') }}', true);
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.setRequestHeader('X-CSRF-TOKEN', $('meta[name="csrf-token"]').attr('content'));
 
