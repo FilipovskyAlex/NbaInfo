@@ -6,10 +6,21 @@ use App\Team;
 use Unirest\Request;
 use Illuminate\Http\Request as R;
 
+/**
+ * Class PlayersController
+ * @package App\Http\Controllers
+ */
 class PlayersController extends Controller
 {
+    /**
+     * Players per page
+     */
     const PER_PAGE = 25;
 
+    /**
+     * @param int $page
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index(int $page = 0)
     {
         $playersResponse = Request::get(config('apiRootPath.ROOT_API_PATH')."/players?page=".$page."&per_page=".self::PER_PAGE, config('apiNBA'));
@@ -27,6 +38,10 @@ class PlayersController extends Controller
         ]);
     }
 
+    /**
+     * @param int $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function getSingle(int $id)
     {
         $player = Request::get(config('apiRootPath.ROOT_API_PATH')."/players/".$id, config('apiNBA'));
@@ -35,10 +50,14 @@ class PlayersController extends Controller
         $player->body->team->image = Team::getAvatar($player->body->team->abbreviation);
 
         $playerData = $player->body;
-//dd($playerData->team);
+
         return view('players.single', ['player' => $playerData]);
     }
 
+    /**
+     * @param R $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function search(R $request)
     {
         $playersResponse = Request::get(config('apiRootPath.ROOT_API_PATH')."/players?page=0&per_page=".self::PER_PAGE."&search=".$request->get('search'), config('apiNBA'));
